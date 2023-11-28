@@ -782,7 +782,7 @@ def completeDailySet(browser: WebDriver):
 
     def completeDailySetSearch(cardNumber: int):
         """Complete daily set search"""
-        time.sleep(5)
+        time.sleep(30)
         browser.find_element(By.XPATH,
                              f'//*[@id="app-host"]/ui-view/mee-rewards-dashboard/main/div/mee-rewards-daily-set-section/div/mee-card-group/div/mee-card[{str(cardNumber)}]/div/card-content/mee-rewards-daily-set-item-content/div/a/div/span').click()
         time.sleep(1)
@@ -795,7 +795,7 @@ def completeDailySet(browser: WebDriver):
 
     def completeDailySetSurvey(cardNumber: int):
         """Complete daily set survey"""
-        time.sleep(5)
+        time.sleep(30)
         browser.find_element(By.XPATH,
                              f'//*[@id="app-host"]/ui-view/mee-rewards-dashboard/main/div/mee-rewards-daily-set-section/div/mee-card-group/div/mee-card[{str(cardNumber)}]/div/card-content/mee-rewards-daily-set-item-content/div/a/div/span').click()
         time.sleep(1)
@@ -821,7 +821,7 @@ def completeDailySet(browser: WebDriver):
 
     def completeDailySetQuiz(cardNumber: int):
         """Complete daily set quiz"""
-        time.sleep(5)
+        time.sleep(30)
         browser.find_element(By.XPATH,
                              f'//*[@id="app-host"]/ui-view/mee-rewards-dashboard/main/div/mee-rewards-daily-set-section[1]/div/mee-card-group[1]/div[1]/mee-card[{str(cardNumber)}]/div[1]/card-content[1]/mee-rewards-daily-set-item-content[1]/div[1]/a[1]/div[3]/span[1]').click()
         time.sleep(3)
@@ -887,7 +887,7 @@ def completeDailySet(browser: WebDriver):
 
     def completeDailySetVariableActivity(cardNumber: int):
         """Complete daily set variable activity"""
-        time.sleep(2)
+        time.sleep(30)
         browser.find_element(By.XPATH,
                              f'//*[@id="app-host"]/ui-view/mee-rewards-dashboard/main/div/mee-rewards-daily-set-section/div/mee-card-group/div/mee-card[{str(cardNumber)}]/div/card-content/mee-rewards-daily-set-item-content/div/a/div/span').click()
         time.sleep(1)
@@ -945,7 +945,7 @@ def completeDailySet(browser: WebDriver):
 
     def completeDailySetThisOrThat(cardNumber: int):
         """Complete daily set this or that"""
-        time.sleep(2)
+        time.sleep(30)
         browser.find_element(
             By.XPATH,
             f'//*[@id="app-host"]/ui-view/mee-rewards-dashboard/main/div/\
@@ -1153,7 +1153,7 @@ def completePunchCards(browser: WebDriver):
             if ERROR:
                 prRed(str(exc))
             resetTabs(browser)
-    time.sleep(2)
+    time.sleep(30)
     browser.get(BASE_URL)
     time.sleep(2)
     LOGS[CURRENT_ACCOUNT]['Punch cards'] = True
@@ -1168,7 +1168,7 @@ def completeMorePromotions(browser: WebDriver):
         """Complete more promotion search"""
         browser.find_element(By.XPATH,
                              f'//*[@id="app-host"]/ui-view/mee-rewards-dashboard/main/div/mee-rewards-more-activities-card/mee-card-group/div/mee-card[{str(cardNumber)}]/div/card-content/mee-rewards-more-activities-card-item/div/a/div/span').click()
-        time.sleep(1)
+        time.sleep(30)
         browser.switch_to.window(window_name=browser.window_handles[1])
         time.sleep(calculateSleep(15))
         browser.close()
@@ -1180,7 +1180,7 @@ def completeMorePromotions(browser: WebDriver):
         """Complete more promotion quiz"""
         browser.find_element(By.XPATH,
                              f'//*[@id="app-host"]/ui-view/mee-rewards-dashboard/main/div/mee-rewards-more-activities-card/mee-card-group/div/mee-card[{str(cardNumber)}]/div/card-content/mee-rewards-more-activities-card-item/div/a/div/span').click()
-        time.sleep(1)
+        time.sleep(30)
         browser.switch_to.window(window_name=browser.window_handles[1])
         time.sleep(calculateSleep(10))
         if not waitUntilQuizLoads(browser):
@@ -1236,7 +1236,7 @@ def completeMorePromotions(browser: WebDriver):
         """Complete more promotion ABC"""
         browser.find_element(By.XPATH,
                              f'//*[@id="app-host"]/ui-view/mee-rewards-dashboard/main/div/mee-rewards-more-activities-card/mee-card-group/div/mee-card[{str(cardNumber)}]/div/card-content/mee-rewards-more-activities-card-item/div/a/div/span').click()
-        time.sleep(1)
+        time.sleep(30)
         browser.switch_to.window(window_name=browser.window_handles[1])
         time.sleep(calculateSleep(10))
         waitUntilVisible(browser, By.XPATH, '//*[@id="QuestionPane0"]/div[2]', 15)
@@ -1258,7 +1258,7 @@ def completeMorePromotions(browser: WebDriver):
         """Complete more promotion this or that"""
         browser.find_element(By.XPATH,
                              f'//*[@id="app-host"]/ui-view/mee-rewards-dashboard/main/div/mee-rewards-more-activities-card/mee-card-group/div/mee-card[{str(cardNumber)}]/div/card-content/mee-rewards-more-activities-card-item/div/a/div/span').click()
-        time.sleep(1)
+        time.sleep(30)
         browser.switch_to.window(window_name=browser.window_handles[1])
         time.sleep(calculateSleep(8))
         if not waitUntilQuizLoads(browser):
@@ -1310,7 +1310,7 @@ def completeMorePromotions(browser: WebDriver):
                     item["destinationUrl"] == BASE_URL:
                 browser.find_element(
                     By.XPATH, '//*[@id="promo-item"]/section/div/div/div/a').click()
-                time.sleep(1)
+                time.sleep(30)
                 browser.switch_to.window(window_name=browser.window_handles[1])
                 time.sleep(calculateSleep(8))
                 browser.close()
