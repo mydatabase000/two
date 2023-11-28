@@ -605,7 +605,7 @@ def getCCodeLangAndOffset() -> tuple:
         return lang, geo, tz
     # Due to ipapi limitations it will default to US
     except:
-        return 'en-US', 'IN', '330'
+        return 'en-in', 'IN', '330'
 
 
 def resetTabs(browser: WebDriver):
