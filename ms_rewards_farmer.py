@@ -711,7 +711,7 @@ def bingSearches(browser: WebDriver, numberOfSearches: int, isMobile: bool = Fal
                 searchbar.send_keys(char)
                 time.sleep(random.uniform(0.2, 0.45))
         searchbar.submit()
-        time.sleep(calculateSleep(15))
+        time.sleep(calculateSleep(120))
         points = 0
         try:
             if not isMobile:
